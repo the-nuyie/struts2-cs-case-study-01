@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "https://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+
+    <package name="user" namespace="/User" extends="struts-default">
+        <!-- URL will be http://localhost:8080/struts2-cs-case-study-01/User/home.action -->
+        <action name="home">
+            <result>/login.jsp</result>
+        </action>
+        <action name="login" class="com.casestudy.cs.action.LoginAction">
+            <result name="SUCCESS">/welcome.jsp</result>
+            <result name="ERROR">/error.jsp</result>
+        </action>
+
+    </package>
+
+</struts>
